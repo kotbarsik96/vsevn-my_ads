@@ -1,0 +1,67 @@
+.my-select {
+    position: relative;
+}
+
+.my-select__container {
+}
+
+.my-select__selected {
+    z-index: 210;
+    cursor: pointer;
+    align-items: center;
+}
+.my-select__value:before {
+    content: "";
+    display: inline-block;
+    vertical-align: middle;
+    height: 100%;
+}
+
+.my-select__selected .icon {
+    margin-left: 5px;
+    font-size: 13px;
+}
+
+.my-select__backdrop {
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    z-index: 200;
+    display: none;
+}
+
+.my-select__dropdown {
+    cursor: pointer;
+    position: absolute;
+    display: none;
+    z-index: 210;
+    background-color: #fff;
+    border: 1px solid #eee;
+    box-shadow: 0 0 10px rgba(0,0,0,.1);
+    max-height: 400px;
+    overflow-y: auto;
+}
+
+.my-select__option {
+    padding: 5px 10px;
+    -webkit-user-select: none; /* Safari */
+    -ms-user-select: none; /* IE 10 and IE 11 */
+    user-select: none; /* Standard syntax */
+}
+
+.my-select__option[aria-selected] {
+    background-color: #fede31;
+}
+
+@media (hover: hover) {
+    .my-select__option:hover {
+        background-color: #fede31;
+    }
+}
+
+.my-select[aria-expanded="true"] .my-select__dropdown,
+.my-select[aria-expanded="true"] .my-select__backdrop {
+    display: block;
+}
