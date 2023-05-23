@@ -3,6 +3,8 @@ MutationObserver = window.MutationObserver || window.WebKitMutationObserver;
 // common elements
 const cover = find('.cover');
 
+const rootPath = `/vsevn-my_ads/`;
+
 // functions
 function find(selector) {
     return document.querySelector(selector);
@@ -528,9 +530,9 @@ function showConfirmModal(title, content, buttons) {
 // advertisement rendering system
 const DEFAULT_LOGO_URL = 'img/profile-icons/default-logo.svg';
 const DEFAULT_PHOTO_URL = 'img/profile-icons/default-photo.svg';
-const ARTICLES_URL = 'data.json';
+const ARTICLES_URL = `${rootPath}json/data.json`;
 const ARTICLE_TEMPLATE_URL = 'article-template.html';
-const SERVICES_URL = 'services.json';
+const SERVICES_URL = `${rootPath}json/services.json`;
 
 const articlesContainer = find('.ads__items');
 

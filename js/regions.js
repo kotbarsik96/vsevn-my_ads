@@ -164,7 +164,7 @@ const citiesMainLabel = document.querySelector('.punkt__all label');
 const regions = [], regionsChecked = [], citiesChecked = [];
 let regionsTotal, citiesTotal, searchCitiesNames = [];
 
-fetch('regions.json').then(data => data.json()).then(initRegions);
+fetch('/vsevn-my_ads/json/regions.json').then(data => data.json()).then(initRegions);
 
 function setupRegion(region) {
     region.switchCities = setupRegionCities(region.cities.controller, region.cities.list);
